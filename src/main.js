@@ -1,4 +1,11 @@
 import { createApp } from 'vue'
+import Vuex from 'vuex'
 import App from './App.vue'
+import {router} from './router'
+import './theme.css'
+import {store} from './store';
 
-createApp(App).mount('#app')
+createApp(App)
+    .use(router)
+    .use(store)
+    .mount('#app')
