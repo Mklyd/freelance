@@ -1,11 +1,17 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import { createStore } from 'vuex'
 
-Vue.use(Vuex);
+export default createStore({
+  state: {
+    tasks: JSON.parse(localStorage.getItem('my-tasks') || '[]')
+  },
+  getters: {
 
-export const store = new Vuex.Store({
-  state: {},
-  getters: {},
-  mutations: {},
+  },
+  mutations: {
+    createTask(state, task) {
+      state.tasks.push(task)
+      
+    }
+  },
   actions: {},
 });
