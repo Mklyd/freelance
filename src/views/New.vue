@@ -31,7 +31,7 @@ export default {
 
     const submit = () => {
       const newTask = {
-
+        
       }
     }
 

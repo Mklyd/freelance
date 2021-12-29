@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    tasks: JSON.parse(localStorage.getItem('my-tasks') || '[]')
+    tasks: JSON.parse(localStorage.getItem('my-tasks'))
   },
   getters: {
 
@@ -13,5 +13,7 @@ export default createStore({
       
     }
   },
-  actions: {},
+  actions: {
+    
+  },
 });
